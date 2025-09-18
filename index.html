@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки и формы</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Гиперссылки и формы</h1>
+            <p class="description">Пример современной HTML5 страницы с различными типами ссылок и формой</p>
+        </header>
+        
+        <div class="content">
+            <section class="links-section">
+                <h2>Различные типы гиперссылок</h2>
+                <ul class="link-list">
+                    <li><a href="http://kubsu.ru">Абсолютная гиперссылка на kubsu.ru</a></li>
+                    <li><a href="https://kubsu.ru">Абсолютная гиперссылка на kubsu.ru (HTTPS)</a></li>
+                    <li><a href="https://kubsu.ru"><img src="C:\Users\Роман\Desktop\сайт дз\image.jpg" alt="Ссылка-изображение" class="link-image" width="2240" height="1680"></a></li>
+                    <li><a href="/internal-page">Сокращенная ссылка на внутреннюю страницу</a></li>
+                    <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+                    <li><a href="#form-section">Ссылка на фрагмент текущей страницы (форма)</a></li>
+                    <li><a href="page.html?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами</a></li>
+                    <li><a href="page.html?id=123">Ссылка с параметром id</a></li>
+                    <li><a href="current.html">Относительная на страницу в текущем каталоге</a></li>
+                    <li><a href="about/page.html">Относительная на страницу в каталоге about</a></li>
+                    <li><a href="../page.html">Относительная на страницу уровнем выше</a></li>
+                    <li><a href="../../page.html">Относительная на страницу двумя уровнями выше</a></li>
+                    <li>Это <a href="page.html">контекстная ссылка</a> в тексте абзаца</li>
+                    <li><a href="https://example.com/page#section">Ссылка на фрагмент стороннего сайта</a></li>
+                    <li>
+                        <div class="image-map-container">
+                            <img src="C:\Users\Роман\Desktop\сайт дз\image.jpg" alt="Image map" usemap="#examplemap" class="link-image">
+                            <map name="examplemap">
+                                <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru" alt="Прямоугольная область">
+                                <area shape="circle" coords="225,75,50" href="https://kubsu.ru" alt="Круглая область">
+                            </map>
+                        </div>
+                    </li>
+                    <li><a href="">Ссылка с пустым href</a></li>
+                    <li><a>Ссылка без href</a></li>
+                    <li><a href="https://kubsu.ru" rel="nofollow">Ссылка с запретом перехода для поисковиков</a></li>
+                    <li><a href="https://kubsu.ru" rel="noindex">Запрещенная для индексации</a></li>
+                    <li>
+                        <ol>
+                            <li><a href="https://kubsu.ru" title="Кубанский государственный университет">КубГУ с title</a></li>
+                            <li><a href="https://kubsu.ru" title="Официальный сайт университета">КубГУ с другим title</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="ftp://username:password@ftp.example.com/file.txt">Ссылка на FTP с авторизацией</a></li>
+                </ul>
+            </section>
+            
+            <section class="form-section" id="form-section">
+                <h2>Форма обратной связи</h2>
+                <form action="/submit" method="POST">
+                    <div class="form-group">
+                        <label for="fio" class="required">ФИО:</label>
+                        <input type="text" id="fio" name="fio" required placeholder="Введите ваше полное имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate" class="required">Дата рождения:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Пол:</label>
+                        <div class="radio-group">
+                            <label for="male">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                Мужской
+                            </label>
+                            <label for="female">
+                                <input type="radio" id="female" name="gender" value="female">
+                                Женский
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="languages" class="required">Любимый язык программирования:</label>
+                        <select id="languages" name="languages" multiple size="6" required>
+                            <option value="pascal">Pascal</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="haskel">Haskel</option>
+                            <option value="clojure">Clojure</option>
+                            <option value="prolog">Prolog</option>
+                            <option value="scala">Scala</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio" class="required">Биография:</label>
+                        <textarea id="bio" name="bio" rows="5" required placeholder="Расскажите о себе..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="contract" name="contract" required>
+                            <label for="contract" class="required">С контрактом ознакомлен(а)</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Сохранить</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>
